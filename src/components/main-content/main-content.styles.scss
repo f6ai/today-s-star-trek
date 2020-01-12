@@ -20,12 +20,20 @@
   grid-row: 1 / 3;
   background-color: $color-red;
   border-top-left-radius: 5rem;
+
+  @include phone {
+    grid-column: 1 / 5;
+  }
 }
 
 .topMiddle {
   grid-column: 7 / 10;
   grid-row: 1 / 3;
   background-color: $color-light-blue;
+
+  @include phone {
+    grid-column: 5 / 9;
+  }
 
   &__text {
     @include nav-link();
@@ -36,6 +44,10 @@
   grid-column: 10 / 13;
   grid-row: 1 / 3;
   background-color: $color-ligt-pink;
+
+  @include phone {
+    grid-column: 9 / 13;
+  }
 
   &__text {
     @include nav-link();

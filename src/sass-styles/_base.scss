@@ -9,8 +9,8 @@ $color-yellow: #fccd97;
 $color-TNG-heading: #008bfe;
 
 // FONT VARIABLES
-$font-primary: "NovaLightUltra", sans-serif;
-$font-heading: "TNGCredits", sans-serif;
+$font-primary: 'NovaLightUltra', sans-serif;
+$font-heading: 'TNGCredits', sans-serif;
 
 // RESPONSIVE BREAKPOINTS
 $bp-1400: 87.5em; // 1400px
@@ -20,28 +20,11 @@ $bp-1000: 62.5em; // 1000px
 $bp-900: 56.25em; // 900px
 $bp-800: 50em; // 800px;
 $bp-700: 43.75em; // 700px;
-$bp-600: 37.5em; // 600px;
+$phone: 37.5em; // 600px;
 $bp-400: 25em; // 400px;
 
-@mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) {
-      @content;
-    } //600px
-  }
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) {
-      @content;
-    } //900px
-  }
-  @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) {
-      @content;
-    } //1200px
-  }
-  @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) {
-      @content;
-    } //1800
+@mixin phone {
+  @media only screen and (max-width: 37.5em) {
+    @content;
   }
 }

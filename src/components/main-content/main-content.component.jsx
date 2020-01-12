@@ -12,7 +12,7 @@ const MainContent = () => {
       {/* <div className='topMiddle'></div> */}
 
       <a className='topMiddle' href='/'>
-        <p className='topMiddle__text'>Generate new</p>
+        <p className='topMiddle__text'>Generate</p>
       </a>
 
       <a className='topRight' href='/'>
