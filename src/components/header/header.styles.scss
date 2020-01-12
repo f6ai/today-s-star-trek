@@ -1,0 +1,74 @@
+@import "../../sass-styles/base";
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(6, minmax(3rem, max-content));
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  grid-gap: 0.7rem;
+
+  &__topbar {
+    background-color: $color-light-blue;
+    border-radius: 5rem;
+    padding: 0rem 2rem;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--text {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: $color-black;
+    }
+  }
+
+  &__left--top {
+    grid-column: 1 / 5;
+    grid-row: 2 / 4;
+    background-color: $color-orange;
+    border-top-left-radius: 2rem;
+  }
+
+  &__left--bottom {
+    grid-column: 1 / 5;
+    grid-row: 4 / 7;
+    background-color: $color-light-purple;
+    border-bottom-left-radius: 4rem;
+  }
+
+  &__bottom {
+    grid-column: 1 / 13;
+    grid-row: 5 / 7;
+    background-color: $color-light-purple;
+    border-bottom-left-radius: 5rem;
+    z-index: 1;
+  }
+
+  &__right {
+    grid-column: 3 / 13;
+    grid-row: 2 / 6;
+    z-index: 2;
+    background-color: #000;
+    border-bottom-left-radius: 4rem;
+  }
+
+  &__title {
+    grid-column: 4 / 12;
+    grid-row: 3 / 5;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--text {
+      font-family: "Tkclscrd", sans-serif;
+      text-transform: uppercase;
+      font-style: italic;
+      color: $color-TNG-heading;
+      letter-spacing: 1px;
+      font-size: 8rem;
+      letter-spacing: 2.5px;
+    }
+  }
+}

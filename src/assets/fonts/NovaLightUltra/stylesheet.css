@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Nova Light Ultra SSi';
+    src: url('NovaLightUltraSSiLightUltraCondensed.eot');
+    src: url('NovaLightUltraSSiLightUltraCondensed.eot?#iefix') format('embedded-opentype'),
+        url('NovaLightUltraSSiLightUltraCondensed.woff2') format('woff2'),
+        url('NovaLightUltraSSiLightUltraCondensed.woff') format('woff'),
+        url('NovaLightUltraSSiLightUltraCondensed.ttf') format('truetype'),
+        url('NovaLightUltraSSiLightUltraCondensed.svg#NovaLightUltraSSiLightUltraCondensed') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

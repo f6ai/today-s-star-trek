@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "NovaLightUltra";
+  src: local("NovaLightUltra"),
+    url(./assets/fonts/NovaLightUltra/NovaLightUltraSSiLightUltraCondensed.ttf)
+      format("truetype"),
+    url(./assets/fonts/NovaLightUltra/NovaLightUltraSSiLightUltraCondensed.eot),
+    url(./assets/fonts/NovaLightUltra/NovaLightUltraSSiLightUltraCondensed.eot?#iefix)
+      format("embedded-opentype"),
+    url(./assets/fonts/NovaLightUltra/NovaLightUltraSSiLightUltraCondensed.woff)
+      format("woff");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "TNGCredits";
+  src: local("TNGCredits"),
+    url(./assets/fonts/TNGCredits/Krupper.ttf) format("truetype"),
+    url(./assets/fonts/TNGCredits/Krupper.eot),
+    url(./assets/fonts/TNGCredits/Krupper.eot?#iefix)
+      format("embedded-opentype"),
+    url(./assets/fonts/TNGCredits/Krupper.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Tkclscrd";
+  src: local("Tkclscrd"),
+    url(./assets/fonts/TKCLSCRD/TKCLSCRD.ttf) format("truetype"),
+    url(./assets/fonts/TKCLSCRD/TKCLSCRD.eot),
+    url(./assets/fonts/TKCLSCRD/TKCLSCRD.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/TKCLSCRD/TKCLSCRD.woff) format("woff");
+}
+
+body {
+  margin: 0;
+  font-family: "NovaLightUltra", sans-serif;
+  font-size: 1.6rem;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 2rem;
 }

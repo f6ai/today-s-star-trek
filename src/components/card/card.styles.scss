@@ -1,0 +1,10 @@
+@import "../../sass-styles/base";
+
+.card {
+  margin: 1.5rem;
+
+  &__text {
+    font-size: 3.8rem;
+    color: $color-yellow;
+  }
+}
