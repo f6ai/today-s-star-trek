@@ -1,10 +1,10 @@
-@import "../../sass-styles/base";
+@import '../../sass-styles/base';
 
 .card {
-  margin: 1.5rem;
+  margin: 2.5rem;
 
   &__text {
-    font-size: 3.8rem;
+    font-size: 5rem;
     color: $color-yellow;
   }
 }

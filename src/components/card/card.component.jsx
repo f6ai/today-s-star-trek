@@ -1,23 +1,50 @@
-import React from "react";
+import React from 'react';
 
-import "./card.styles.scss";
+import { firestore } from '../../firebase/firebase.utils';
 
-const Card = () => {
-  return (
-    <div className="card">
-      <p className="card__text">
-        While the Enterprise is investigating a strange phenomenon near the
-        Gamma Quadrant, they receive a telepathic transmission from the USS
-        Constellation. The ship is being chased and the captain, Lt. Marlon, has
-        decided he must leave the ship immediately. Captain Picard is pleased as
-        the captain has a plan and it is to be used by an alien race. Marlon
-        asks Lt. Commander Geordi to send him to the planet where he is assigned
-        to guard a security center. it is to be used by an alien race. Marlon
-        asks Lt. Commander Geordi to send him to the planet where he is assigned
-        to guard a security center.
-      </p>
-    </div>
-  );
-};
+import './card.styles.scss';
+
+class Card extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: ''
+    };
+  }
+
+  componentDidMount() {
+    const collectionRef = firestore.collection('test');
+    collectionRef.onSnapshot(async snapshot => {
+      this.getData(snapshot);
+    });
+    this.getDay();
+  }
+
+  getDay() {
+    let today = new Date();
+    // format: month/day/year
+    const startDay = new Date('01/05/2020');
+    let diffDays = parseInt((today - startDay) / (1000 * 60 * 60 * 24), 10);
+    return diffDays;
+  }
+
+  // pull data from firebase based on day from the startDay
+  getData = collections => {
+    let day = this.getDay();
+    if (day === collections.docs.length) {
+      this.setState({ text: 'No more Star Trek.' });
+    }
+    const data = collections.docs[day].data().episode_summary;
+    this.setState({ text: data });
+  };
+
+  render() {
+    return (
+      <div className='card'>
+        <p className='card__text'>{this.state.text}</p>
+      </div>
+    );
+  }
+}
 
 export default Card;
