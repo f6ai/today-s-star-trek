@@ -22,7 +22,7 @@
   border-top-left-radius: 5rem;
 
   @include phone {
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
   }
 }
 
@@ -32,7 +32,7 @@
   background-color: $color-light-blue;
 
   @include phone {
-    grid-column: 5 / 9;
+    grid-column: 4 / 9;
   }
 
   &__text {

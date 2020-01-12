@@ -4,16 +4,16 @@ import Card from '../card/card.component';
 
 import './main-content.styles.scss';
 
-const MainContent = () => {
+const MainContent = props => {
   return (
     <main className='main'>
       <div className='topLeft'></div>
 
-      {/* <div className='topMiddle'></div> */}
+      <div className='topMiddle'></div>
 
-      <a className='topMiddle' href='/'>
-        <p className='topMiddle__text'>Generate</p>
-      </a>
+      {/* <a className='topMiddle' href='/'>
+        <p className='topMiddle__text'>Generate new</p>
+      </a> */}
 
       <a className='topRight' href='/'>
         <p className='topRight__text'>About us</p>
@@ -24,7 +24,7 @@ const MainContent = () => {
       <div className='sidebar--bottom'></div>
       <div className='bottom'></div>
       <div className='main__container'>
-        <Card />
+        <Card text={props.text} />
       </div>
     </main>
   );
