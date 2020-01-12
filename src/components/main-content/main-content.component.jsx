@@ -15,7 +15,7 @@ const MainContent = props => {
         <p className='topMiddle__text'>Generate new</p>
       </a> */}
 
-      <a className='topRight' href='/'>
+      <a className='topRight' href='https://github.com/f6ai/today-s-star-trek'>
         <p className='topRight__text'>About us</p>
       </a>
 

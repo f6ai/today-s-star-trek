@@ -39,7 +39,6 @@ class App extends React.Component {
     // format: month/day/year
     const startDay = new Date('01/12/2020');
     let diffDays = parseInt((today - startDay) / (1000 * 60 * 60 * 24), 10);
-    console.log(diffDays);
     return diffDays;
   }
 
