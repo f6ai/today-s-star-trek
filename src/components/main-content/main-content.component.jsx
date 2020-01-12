@@ -9,11 +9,11 @@ const MainContent = () => {
     <main className='main'>
       <div className='topLeft'></div>
 
-      <div className='topMiddle'></div>
+      {/* <div className='topMiddle'></div> */}
 
-      {/* <a className='topMiddle' href='/'>
-        <p className='topMiddle__text'>Archive</p>
-      </a> */}
+      <a className='topMiddle' href='/'>
+        <p className='topMiddle__text'>Generate new</p>
+      </a>
 
       <a className='topRight' href='/'>
         <p className='topRight__text'>About us</p>

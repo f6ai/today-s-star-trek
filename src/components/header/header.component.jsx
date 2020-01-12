@@ -9,6 +9,7 @@ const Header = () => {
     <header className='header'>
       <div className='header__topbar'>
         <p className='header__topbar--text'>
+          {'STARDATE: '}
           <StarDate />
         </p>
       </div>
