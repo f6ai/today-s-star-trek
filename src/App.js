@@ -1,7 +1,8 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import MainContent from './components/main-content/main-content.component';
-import Header from './components/header/header.component';
+import HomePage from './pages/homepage/homepage.component';
+import About from './pages/about/about.component';
 
 import { firestore } from './firebase/firebase.utils';
 
@@ -55,8 +56,26 @@ class App extends React.Component {
   render() {
     return (
       <div className='app'>
-        <Header />
-        <MainContent text={this.state.text} />
+        <Switch>
+          <Route
+            exact
+            path='/'
+            render={props => (
+              <HomePage
+                {...props}
+                text={this.state.text}
+                navigation={'About us'}
+              />
+            )}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            path='/about'
+            render={props => <About {...props} navigation={'Home'} />}
+          />
+          } />
+        </Switch>
       </div>
     );
   }
