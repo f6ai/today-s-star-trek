@@ -4,7 +4,7 @@ import MainContent from '../../components/main-content/main-content.component';
 import Header from '../../components/header/header.component';
 
 const aboutText = (
-  <p style={{ fontSize: '4.5rem' }}>
+  <div style={{ fontSize: '4.5rem' }}>
     We are enthusiastic Star Trek fans who like to experiment with AI and web
     development. The episodes were generated via GPT-2 natural language
     generation model trained on real Star Trek episode summaries collected from
@@ -15,7 +15,7 @@ const aboutText = (
           style={{ color: 'inherit' }}
           href='https://github.com/karoly-hars/gpt2_episode_summary_generator'
         >
-          karolyhars's summary generator
+          karolyhars' summary generator
         </a>
       </li>
       <li>
@@ -27,7 +27,7 @@ const aboutText = (
         </a>
       </li>
     </ul>
-  </p>
+  </div>
 );
 
 const About = ({ navigation }) => {
