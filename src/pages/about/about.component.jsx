@@ -13,14 +13,16 @@ const aboutText = (
       <li>
         <a
           style={{ color: 'inherit' }}
+          target='_blank'
           href='https://github.com/karoly-hars/gpt2_episode_summary_generator'
         >
-          karolyhars' summary generator
+          karoly-hars' summary generator
         </a>
       </li>
       <li>
         <a
           style={{ color: 'inherit' }}
+          target='_blank'
           href='https://github.com/f6ai/today-s-star-trek'
         >
           this webpage's repo
