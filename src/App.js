@@ -25,7 +25,6 @@ class App extends React.Component {
 
     // on every page load, pull today's star trek episode
     this.createCollectionRef(this.getData);
-    this.getDay();
   }
 
   createCollectionRef(func) {
@@ -53,6 +52,23 @@ class App extends React.Component {
     this.setState({ text: data });
   };
 
+  randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
+  getNewData = collections => {
+    let day = this.randomIntFromInterval(1, 499);
+    if (day === collections.docs.length) {
+      this.setState({ text: 'No more Star Trek.' });
+    }
+    const data = collections.docs[day].data().episode_summary;
+    this.setState({ text: data });
+  };
+
+  onGenerateNew = () => {
+    this.createCollectionRef(this.getNewData);
+  };
+
   render() {
     return (
       <div className='app'>
@@ -65,6 +81,7 @@ class App extends React.Component {
                 {...props}
                 text={this.state.text}
                 navigation={'About us'}
+                click={this.onGenerateNew}
               />
             )}
           />

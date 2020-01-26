@@ -14,6 +14,7 @@ const aboutText = (
         <a
           style={{ color: 'inherit' }}
           target='_blank'
+          rel='noopener noreferrer'
           href='https://github.com/karoly-hars/gpt2_episode_summary_generator'
         >
           karoly-hars' summary generator
@@ -23,6 +24,7 @@ const aboutText = (
         <a
           style={{ color: 'inherit' }}
           target='_blank'
+          rel='noopener noreferrer'
           href='https://github.com/f6ai/today-s-star-trek'
         >
           this webpage's repo

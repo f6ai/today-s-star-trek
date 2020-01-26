@@ -5,16 +5,16 @@ import Card from '../card/card.component';
 
 import './main-content.styles.scss';
 
-const MainContent = ({ text, navigation }) => {
+const MainContent = ({ navigation, text, click }) => {
   return (
     <main className='main'>
       <div className='topLeft'></div>
 
-      <div className='topMiddle'></div>
-
-      {/* <a className='topMiddle' href='/'>
-        <p className='topMiddle__text'>Generate new</p>
-      </a> */}
+      <div className='topMiddle'>
+        <p className='topMiddle__text' onClick={click}>
+          Next Generation
+        </p>
+      </div>
 
       {navigation === 'About us' ? (
         <Link className='topRight' to='/about'>
